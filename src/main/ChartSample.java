@@ -1,3 +1,5 @@
+import com.alibaba.fastjson.JSON;
+
 class ChartSample {
 
     public static void main(String[] args) {
@@ -7,7 +9,9 @@ class ChartSample {
         user.name = "John";
         user.email= "test@test.com";
 
-        System.out.println("Hello world");
+        String jsonUser = JSON.toJSONString(user);
+
+        System.out.println(jsonUser);
     }
 
 }
